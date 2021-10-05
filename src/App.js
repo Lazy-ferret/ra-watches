@@ -15,9 +15,9 @@ function App() {
     setWatches((prev) => ([...prev, form]))
   }
 
-  const onDelete = (e) => {
+  const onDelete = (id) => {
     setWatches((prev) =>
-      prev.filter((item) => item.id !== e)
+      prev.filter((item) => item.id !== id)
     )
   }
 

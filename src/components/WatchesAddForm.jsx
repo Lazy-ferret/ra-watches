@@ -21,9 +21,11 @@ export default class WatchesAddForm extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        [this.state.id] = nanoid();
         this.props.onAdd(this.state);
-        this.setState(INITIAL_STATE);
+        this.setState({
+            ...INITIAL_STATE,
+            id: nanoid()
+        });
     }
 
     render() {
